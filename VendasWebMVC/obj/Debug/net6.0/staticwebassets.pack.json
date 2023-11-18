@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
+      "Id": "C:\\Users\\jackson.miranda\\source\\repos\\UDEMY\\projetos\\VendasWebMVC\\VendasWebMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-spacelab.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-spacelab.css"
+    },
+    {
       "Id": "C:\\Users\\jackson.miranda\\source\\repos\\UDEMY\\projetos\\VendasWebMVC\\VendasWebMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
