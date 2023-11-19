@@ -2,11 +2,9 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VendasWebMVC.Data;
-
-#nullable disable
+using VendasWebMVC.Models;
 
 namespace VendasWebMVC.Migrations
 {
@@ -17,118 +15,77 @@ namespace VendasWebMVC.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.23")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("VendasWebMVC.Models.Departament", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd();
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                b.Property<string>("Name");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.HasKey("id");
 
-                    b.HasKey("id");
-
-                    b.ToTable("Departament");
-                });
+                b.ToTable("Departament");
+            });
 
             modelBuilder.Entity("VendasWebMVC.Models.SalesRecord", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd();
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                b.Property<double>("Amount");
 
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
+                b.Property<DateTime>("Date");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
+                b.Property<int?>("SellerId");
 
-                    b.Property<int>("SaleStatus")
-                        .HasColumnType("int");
+                b.Property<int>("Status");
 
-                    b.Property<int>("SellerId")
-                        .HasColumnType("int");
+                b.HasKey("Id");
 
-                    b.HasKey("Id");
+                b.HasIndex("SellerId");
 
-                    b.HasIndex("SellerId");
-
-                    b.ToTable("SalesRecord");
-                });
+                b.ToTable("SalesRecord");
+            });
 
             modelBuilder.Entity("VendasWebMVC.Models.Seller", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd();
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                b.Property<double>("BaseSalary");
 
-                    b.Property<double>("Basesalary")
-                        .HasColumnType("float");
+                b.Property<DateTime>("BirthDate");
 
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("datetime2");
+                b.Property<int>("DepartamentId");
 
-                    b.Property<int>("Departamentid")
-                        .HasColumnType("int");
+                b.Property<string>("Email");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Name");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.HasKey("Id");
 
-                    b.HasKey("Id");
+                b.HasIndex("DepartamentId");
 
-                    b.HasIndex("Departamentid");
-
-                    b.ToTable("Seller");
-                });
+                b.ToTable("Seller");
+            });
 
             modelBuilder.Entity("VendasWebMVC.Models.SalesRecord", b =>
-                {
-                    b.HasOne("VendasWebMVC.Models.Seller", "Seller")
-                        .WithMany("Sales")
-                        .HasForeignKey("SellerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Seller");
-                });
+            {
+                b.HasOne("VendasWebMVC.Models.Seller", "Seller")
+                    .WithMany("Sales")
+                    .HasForeignKey("SellerId");
+            });
 
             modelBuilder.Entity("VendasWebMVC.Models.Seller", b =>
-                {
-                    b.HasOne("VendasWebMVC.Models.Departament", "Departament")
-                        .WithMany("Sellers")
-                        .HasForeignKey("Departamentid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Departament");
-                });
-
-            modelBuilder.Entity("VendasWebMVC.Models.Departament", b =>
-                {
-                    b.Navigation("Sellers");
-                });
-
-            modelBuilder.Entity("VendasWebMVC.Models.Seller", b =>
-                {
-                    b.Navigation("Sales");
-                });
+            {
+                b.HasOne("VendasWebMVC.Models.Departament", "Department")
+                    .WithMany("Sellers")
+                    .HasForeignKey("DepartamentId")
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
 #pragma warning restore 612, 618
         }
     }

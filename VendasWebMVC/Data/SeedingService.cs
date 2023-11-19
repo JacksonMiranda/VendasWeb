@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using VendasWebMVC.Models;
 using VendasWebMVC.Models.Enums;
-using VendasWebMVC.Models.Enums;
-using VendasWebMVC.Models;
 using VendasWebMVC.Data;
 
 namespace VendasWebMVC.Data

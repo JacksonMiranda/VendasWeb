@@ -15,8 +15,6 @@ using Microsoft.EntityFrameworkCore;
 using VendasWebMVC.Models;
 using VendasWebMVC.Data;
 using VendasWebMVC.Services;
-using VendasWebMVC.Data;
-using VendasWebMVC.Services;
 
 namespace VendasWebMVC
 {
@@ -43,7 +41,7 @@ namespace VendasWebMVC
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<VendasWebMVCContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("VendasWebMVCContext"), builder =>
+                    options.UseMySql(Configuration.GetConnectionString("VendasWebMVCContext"), builder =>
                         builder.MigrationsAssembly("VendasWebMVC")));
 
             services.AddScoped<SeedingService>();
@@ -68,7 +66,7 @@ namespace VendasWebMVC
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                seedingService.Seed();
+                //seedingService.Seed();
             }
             else
             {
