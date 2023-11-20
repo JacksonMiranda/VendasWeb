@@ -39,3 +39,4 @@ C:\Users\jackson.miranda\source\repos\UDEMY\projetos\VendasWebMVC\VendasWebMVC\o
 C:\Users\jackson.miranda\source\repos\UDEMY\projetos\VendasWebMVC\VendasWebMVC\obj\Debug\netcoreapp2.1\VendasWebMVC.pdb
 C:\Users\jackson.miranda\source\repos\UDEMY\projetos\VendasWebMVC\VendasWebMVC\obj\Debug\netcoreapp2.1\VendasWebMVC.genruntimeconfig.cache
 C:\Users\jackson.miranda\source\repos\UDEMY\projetos\VendasWebMVC\VendasWebMVC\obj\Debug\netcoreapp2.1\VendasWebMVC.csproj.CopyComplete
+C:\Users\jackson.miranda\source\repos\UDEMY\projetos\VendasWebMVC\VendasWebMVC\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Index.cshtml.g.cs

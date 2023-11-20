@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VendasWebMVC.Data;
 
 namespace VendasWebMVC.Migrations
 {
     [DbContext(typeof(VendasWebMVCContext))]
-    partial class VendasWebMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20231119233307_MySQL")]
+    partial class MySQL
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -19,12 +21,12 @@ namespace VendasWebMVC.Migrations
 
             modelBuilder.Entity("VendasWebMVC.Models.Departament", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Departament");
                 });
@@ -58,7 +60,7 @@ namespace VendasWebMVC.Migrations
 
                     b.Property<DateTime>("BirthDate");
 
-                    b.Property<int?>("DepartamentId");
+                    b.Property<int?>("Departamentid");
 
                     b.Property<string>("Email");
 
@@ -66,7 +68,7 @@ namespace VendasWebMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DepartamentId");
+                    b.HasIndex("Departamentid");
 
                     b.ToTable("Seller");
                 });
@@ -82,7 +84,7 @@ namespace VendasWebMVC.Migrations
                 {
                     b.HasOne("VendasWebMVC.Models.Departament", "Departament")
                         .WithMany("Sellers")
-                        .HasForeignKey("DepartamentId");
+                        .HasForeignKey("Departamentid");
                 });
 #pragma warning restore 612, 618
         }

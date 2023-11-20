@@ -6,7 +6,7 @@ namespace VendasWebMVC.Models
 {
     public class Departament
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
 
@@ -15,7 +15,7 @@ namespace VendasWebMVC.Models
         }
         public Departament(int id, String name)
         {
-            this.id = id;
+            this.Id = id;
             this.Name = name;
         }
 
