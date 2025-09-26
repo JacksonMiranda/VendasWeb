@@ -1,0 +1,91 @@
+name: Feature Request
+description: Sugira uma nova funcionalidade para o VendasWeb
+title: "[FEATURE] "
+labels: ["enhancement", "needs-triage"]
+assignees:
+  - JacksonMiranda
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por sugerir uma nova funcionalidade! Por favor, preencha o formulário abaixo.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Resumo da Funcionalidade
+      description: Breve descrição da funcionalidade solicitada
+      placeholder: ex. Adicionar relatório de vendas por período
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema/Necessidade
+      description: Que problema esta funcionalidade resolve?
+      placeholder: |
+        Atualmente é difícil visualizar...
+        Os usuários precisam de...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solução Proposta
+      description: Descreva como você gostaria que esta funcionalidade funcionasse
+      placeholder: |
+        Eu gostaria de poder...
+        A funcionalidade deveria...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Soluções Alternativas
+      description: Descreva alternativas que você considerou
+      placeholder: Uma alternativa seria...
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade
+      description: Qual a prioridade desta funcionalidade?
+      options:
+        - Baixa - Nice to have
+        - Média - Importante para workflow
+        - Alta - Bloqueia produtividade
+        - Crítica - Essencial para negócio
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Complexidade Estimada
+      description: Como você avalia a complexidade desta funcionalidade?
+      options:
+        - Pequena - Algumas horas
+        - Média - Alguns dias
+        - Grande - Algumas semanas
+        - Muito Grande - Alguns meses
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de Aceitação
+      description: Como saberíamos que esta funcionalidade está completa?
+      placeholder: |
+        - [ ] Usuário pode...
+        - [ ] Sistema deve...
+        - [ ] Interface mostra...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informações Adicionais
+      description: Mockups, referências, context adicional
+      placeholder: Links, imagens, exemplos de outros sistemas, etc.

@@ -1,0 +1,15 @@
+# Global Code Owners
+* @JacksonMiranda
+
+# Documentation
+*.md @JacksonMiranda
+docs/ @JacksonMiranda
+
+# Configuration files
+.github/ @JacksonMiranda
+*.yml @JacksonMiranda
+*.yaml @JacksonMiranda
+*.json @JacksonMiranda
+
+# Main application
+VendasWebMVC/ @JacksonMiranda
