@@ -1,0 +1,80 @@
+name: Question
+description: Faça uma pergunta sobre o VendasWeb
+title: "[QUESTION] "
+labels: ["question"]
+assignees:
+  - JacksonMiranda
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tem uma pergunta sobre o VendasWeb? Estamos aqui para ajudar!
+
+  - type: input
+    id: summary
+    attributes:
+      label: Resumo da Pergunta
+      description: Resuma sua pergunta em uma frase
+      placeholder: ex. Como configurar conexão com banco de dados?
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Pergunta Detalhada
+      description: Descreva sua pergunta com mais detalhes
+      placeholder: |
+        Estou tentando...
+        Gostaria de saber como...
+        Não consegui entender...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria
+      description: Qual categoria melhor descreve sua pergunta?
+      options:
+        - Instalação e Configuração
+        - Uso e Funcionalidades
+        - Desenvolvimento e Contribuição
+        - Arquitetura e Design
+        - Performance e Otimização
+        - Deployment e Produção
+        - Outros
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: Forneça context sobre seu ambiente ou situação
+      placeholder: |
+        Estou usando...
+        Meu objetivo é...
+        Já tentei...
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: O que já foi tentado
+      description: Descreva o que você já tentou fazer
+      placeholder: |
+        Já consultei a documentação em...
+        Tentei fazer...
+        Procurei por...
+
+  - type: checkboxes
+    id: documentation
+    attributes:
+      label: Documentação
+      description: Você já consultou a documentação disponível?
+      options:
+        - label: Li o README.md
+        - label: Consultei a documentação de arquitetura
+        - label: Procurei em issues existentes
+        - label: Verifiquei as discussões do projeto

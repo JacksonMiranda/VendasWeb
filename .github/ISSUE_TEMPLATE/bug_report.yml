@@ -1,0 +1,80 @@
+name: Bug Report
+description: Relate um bug para nos ajudar a melhorar
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees:
+  - JacksonMiranda
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar um bug! Por favor, preencha o formulário abaixo com o máximo de detalhes possível.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Resumo
+      description: Breve descrição do problema
+      placeholder: ex. A aplicação trava ao tentar salvar uma venda
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição Detalhada
+      description: Descreva o comportamento esperado vs. comportamento atual
+      placeholder: |
+        Comportamento esperado: ...
+        Comportamento atual: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para Reproduzir
+      description: Lista detalhada de passos para reproduzir o problema
+      placeholder: |
+        1. Vá para...
+        2. Clique em...
+        3. Veja o erro...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severidade
+      description: Quão severo é o impacto deste bug?
+      options:
+        - Baixa - Problema cosmético
+        - Média - Funcionalidade afetada
+        - Alta - Sistema não funciona
+        - Crítica - Perda de dados/segurança
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Em qual ambiente o bug foi encontrado?
+      placeholder: ex. Desenvolvimento, Produção, Windows 10, Chrome 120
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs ou Mensagens de Erro
+      description: Cole aqui qualquer log ou mensagem de erro relevante
+      render: text
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informações Adicionais
+      description: Qualquer outra informação que possa ser útil
+      placeholder: Screenshots, context adicional, etc.
