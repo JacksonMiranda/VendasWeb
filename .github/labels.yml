@@ -1,0 +1,56 @@
+---
+# Standardized repository labels for VendasWeb .NET project
+
+# Bug and Issue Tracking
+- name: bug
+  color: d73a4a
+  description: Something isn't working
+
+# Feature Development
+- name: feature
+  color: a2eeef
+  description: New feature or request
+
+# Maintenance and Chores
+- name: chore
+  color: fef2c0
+  description: Maintenance tasks and chores
+
+# Documentation
+- name: docs
+  color: 0075ca
+  description: Improvements or additions to documentation
+
+# Performance
+- name: perf
+  color: ff6d00
+  description: Performance improvements
+
+# Code Quality
+- name: refactor
+  color: fbca04
+  description: Code refactoring and improvements
+
+# Testing
+- name: test
+  color: 7057ff
+  description: Adding or updating tests
+
+# CI/CD and Infrastructure
+- name: ci
+  color: 0052cc
+  description: Continuous integration and deployment
+
+# Security
+- name: security
+  color: b60205
+  description: Security related issues or improvements
+
+# Community Support
+- name: help wanted
+  color: 008672
+  description: Extra attention is needed
+
+- name: good first issue
+  color: 7057ff
+  description: Good for newcomers
